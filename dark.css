@@ -5,7 +5,11 @@
 
 body{
     background-color: #0B110E;
+
+    background-image: url(https://raw.githubusercontent.com/taimoorshahzada/Film-Grain-Noise-Effect-on-Background-in-Website-using-Pure-CSS/main/noise.gif);  
     color:#FEFCFB;
+    background-blend-mode: multiply;
+
 }
 
 .dark{
