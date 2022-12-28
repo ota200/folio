@@ -1,8 +1,5 @@
 var theme = document.getElementsByTagName('link')[0];
 
-b = localStorage.getItem("theme")
-console.log(localStorage.getItem("theme"))
-theme.setAttribute('href', b);
 
 function Theme(){
     if (theme.getAttribute('href') == 'light.css') {
@@ -18,7 +15,12 @@ function Theme(){
 
 function set(){
     b = localStorage.getItem("theme")
-    console.log(localStorage.getItem("theme"))
-    theme.setAttribute('href', b);
+    if (b !== ""){
+        console.log(localStorage.getItem("theme"))
+        theme.setAttribute('href', b);
+    } else {
+        console.log(pass)
+    }
+
 }
 
