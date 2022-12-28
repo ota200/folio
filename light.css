@@ -7,6 +7,11 @@ body{
     background-color: #FCF7F6;
 }
 
+.dark{
+    background-color: #0B110E;
+    color:#FEFCFB;
+}
+
 .bg_blobs{
     position: fixed;
     z-index: -1;
@@ -97,13 +102,15 @@ button{
 .bottom2{
     margin: 0;
     position: absolute;
-    top: 65%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     border:solid;
-    border-color: black;
     border-radius: 5rem;
-    padding: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 .links_holder{
