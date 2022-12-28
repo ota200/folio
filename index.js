@@ -15,11 +15,13 @@ function Theme(){
 
 function set(){
     b = localStorage.getItem("theme")
-    if (b !== ""){
+    console.log(b)
+    if (b == null){
+        theme.setAttribute('href', "light.css");
+
+    } else {
         console.log(localStorage.getItem("theme"))
         theme.setAttribute('href', b);
-    } else {
-        console.log(pass)
     }
 
 }
