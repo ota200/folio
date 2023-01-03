@@ -10,8 +10,8 @@ body{
 }
 
 @keyframes fadeIn {
-    0% { background-color: #0B110E; }
-    100% {background-color: #FCF7F6;}
+    from { background-color: #0B110E; }
+    to {background-color: #FCF7F6;}
 }
 
 .dark{

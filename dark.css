@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 *{padding:none;margin:none;}
 
 body{
@@ -16,10 +17,6 @@ body{
     to { background-color: #0B110E; }
 }
 
-@keyframes fadeIn2 {
-    from { background-color: #FEFCFB; }
-    to { background-color: #FEFCFB; }
-}
 
 
 .dark{

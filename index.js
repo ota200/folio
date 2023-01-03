@@ -14,6 +14,7 @@ function Theme(){
         localStorage.setItem("theme","light.css")
         body.style.animationName = "fadeIn"
         body.style.animationDuration = "2s"
+        body.style.background = "red"
 
     }
 }
