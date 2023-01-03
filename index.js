@@ -5,15 +5,13 @@ function Theme(){
     if (theme.getAttribute('href') == 'light.css') {
         theme.setAttribute('href', 'dark.css');
         localStorage.setItem("theme","dark.css")
-        body.style("background:#ffffff;")
-        alert(body.style)
+        body.style.animation = "fadeIn 2s;"
 
 
     } else {
         theme.setAttribute('href', 'light.css');
         localStorage.setItem("theme","light.css")
-        body.style.background = "#ffffff"
-        alert(body.style)
+        body.style.animation = "fadeIn 2s;"
     }
 }
 
