@@ -7,6 +7,7 @@ body{
     background-color: #FCF7F6;
     background-image: url(https://raw.githubusercontent.com/taimoorshahzada/Film-Grain-Noise-Effect-on-Background-in-Website-using-Pure-CSS/main/noise.gif);  
     background-blend-mode: overlay;
+    height: 150%;
 }
 
 @keyframes fadeIn {
