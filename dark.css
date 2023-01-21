@@ -117,27 +117,21 @@ button{
 
 .bottom2{
     margin: 0;
-    position: relative;
-    border-width: 2rem;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border:solid;
     border-radius: 5rem;
     border-color: #FECF70;
 
-    width:30%;
-
-    background-color: #fecf7019;
-    
     padding-top: 5rem;
     padding-bottom: 5rem;
     padding-left: 10rem;
     padding-right: 10rem;
-
-    z-index: -100;
 }
 
-.center_holder{
-    
-}
+
 
 .links_holder{
     background-color: #ba2525ab;
