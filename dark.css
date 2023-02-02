@@ -174,8 +174,8 @@ button{
 }
 
 #main{
+    transition: opacity 10s; 
     opacity: 1;
-    transition: opacity 1s; 
 }
 
 /*
