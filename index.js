@@ -1,6 +1,8 @@
 var theme = document.getElementsByTagName('link')[0];
 var body = document.getElementsByTagName('body')
+var page = document.getElementsByClassName('homebar')
 
+const element = document.getElementById("main").children
 
 function Theme(){
     if (theme.getAttribute('href') == 'light.css') {
@@ -30,3 +32,24 @@ function set(){
 
 }
 
+function home(){
+    alert("home")
+    element[0].style.display = "block"
+    element[1].style.display = "none"
+    element[2].style.display = "none"
+
+
+    
+}
+
+function about(){
+    element[0].style.display = "none"
+    element[1].style.display = "block"
+    element[2].style.display = "none"
+}
+
+function projects(){
+    element[0].style.display = "none"
+    element[1].style.display = "none"
+    element[2].style.display = "block"
+}

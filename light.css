@@ -60,6 +60,7 @@ h1{
     padding-top: 2%;
 }
 
+
 button{
     background-color:#FECF70;
     border:none;
@@ -143,6 +144,18 @@ button{
     transform: translate(-50%, -50%);
 }
 
+
+#homebar{
+    display: block;
+}
+
+#aboutbar{
+    display: none;
+}
+
+#projectsbar{
+    display: none;
+}
 /*
 
 @media (prefers-color-scheme: dark) {
