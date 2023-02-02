@@ -144,6 +144,24 @@ button{
     margin-right: auto;
 }
 
+#homebar{
+    display: block;
+}
+
+#aboutbar{
+    display: none;
+}
+
+#projectsbar{
+    display: none;
+}
+
+#main{
+    opacity: 1;
+    transition: opacity 1s; 
+}
+
+
 /*
 
 @media (prefers-color-scheme: dark) {

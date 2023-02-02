@@ -137,9 +137,7 @@ button{
     z-index: -100;
 }
 
-.center_holder{
-    
-}
+
 
 .links_holder{
     background-color: #ba2525ab;
@@ -167,6 +165,23 @@ button{
 
 .change{
     color:rgba(255, 255, 255, 0);
+}
+
+#homebar{
+    display: block;
+}
+
+#aboutbar{
+    display: none;
+}
+
+#projectsbar{
+    display: none;
+}
+
+#main{
+    opacity: 1;
+    transition: opacity 1s; 
 }
 
 /*
