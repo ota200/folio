@@ -7,7 +7,6 @@ body{
     background-color: #FCF7F6;
     background-image: url(https://raw.githubusercontent.com/taimoorshahzada/Film-Grain-Noise-Effect-on-Background-in-Website-using-Pure-CSS/main/noise.gif);  
     background-blend-mode: overlay;
-    height: 150%;
 }
 
 @keyframes fadeIn {
@@ -60,6 +59,7 @@ h1{
     padding-left: 5%;
     padding-top: 2%;
 }
+
 
 button{
     background-color:#FECF70;
@@ -138,10 +138,28 @@ button{
 }
 
 .center{
-    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#homebar{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+#aboutbar{
+    display: none;
+}
+
+#projectsbar{
+    display: none;
+}
+
+#main{
+    opacity: 1;
+    transition: opacity 1s; 
 }
 
 #homebar{

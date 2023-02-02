@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="light.css">
-    <script src="index.js" ></script>
-</head>
-    <body onload="set()">
-
-        <div class="bg_blobs">
-            <span style="left:80%;margin-top:10%; width:70rem;"></span>
-            <span style="left:100%;margin-top:10%; width:30rem;"></span>
-
-
-
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="light.css">
+    </head>
+    <body onload="set()" >
 
         <div class="pad">
+            <div class="bg_blobs">
+                <span style="left:80%;margin-top:10%; width:70rem;"></span>
+                <span style="left:100%;margin-top:10%; width:30rem;"></span>
+    
+    
+    
+            </div>
             <div class='nav'>
-      
+          
                 <h2>O.T.A</h2>
       
                 <div class='bg_button'>
-                    <button onclick="window.location='index.html';" class='home'><svg class="home_icon" viewBox="0 0 39 45" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.997C0 15.4777 0.690785 14.0408 1.87735 13.092L16.3774 1.49703C18.2031 0.0370402 20.7969 0.0370405 22.6226 1.49703L37.1227 13.092C38.3092 14.0408 39 15.4777 39 16.997V40C39 42.7614 36.7614 45 34 45H5C2.23858 45 0 42.7614 0 40L0 16.997Z" fill="#FEFCFB"/></svg></button>
-                    <button onclick="window.location='About.html';" >about</button>
-                    <button onclick="window.location='Projects.html';" >projects</button>
+                    <button onclick="home()" class='home'><svg class="home_icon" viewBox="0 0 39 45" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.997C0 15.4777 0.690785 14.0408 1.87735 13.092L16.3774 1.49703C18.2031 0.0370402 20.7969 0.0370405 22.6226 1.49703L37.1227 13.092C38.3092 14.0408 39 15.4777 39 16.997V40C39 42.7614 36.7614 45 34 45H5C2.23858 45 0 42.7614 0 40L0 16.997Z" fill="#FEFCFB"/></svg></button>
+                    <button onclick="about()" >about</button>
+                    <button onclick="projects()" >projects</button>
                     <button onclick="Theme()">theme</button>
                 </div>
       
             </div>
+        </div>
+
+        <div id="main">
+
+            <div id="homebar">
 
 
-            <h1 class="change"> A Developer of things </h1>
+                <div class="pad">
 
-            <div class="bottom">
-
-                <header>
-                    <b><i>Some kid, who thinks becomeing a <br>software enginer is a good life carrer.</i></b>
-                </header>
-
-                <div class="links_holder">
-                        
-                    <a><svg  viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M29.5 0C13.2111 0 0 13.2086 0 29.5C0 42.5341 8.45175 53.5917 20.1755 57.493C21.6481 57.7659 22.125 56.8514 22.125 56.0746V50.5827C13.9191 52.3674 12.2105 47.1017 12.2105 47.1017C10.8683 43.692 8.93358 42.7848 8.93358 42.7848C6.25646 40.9534 9.13762 40.9927 9.13762 40.9927C12.0999 41.1992 13.6585 44.0337 13.6585 44.0337C16.2889 48.5423 20.559 47.2393 22.243 46.4846C22.506 44.5794 23.2706 43.2765 24.1163 42.5415C17.5648 41.7917 10.6765 39.262 10.6765 27.9611C10.6765 24.7382 11.8295 22.1078 13.715 20.0428C13.4102 19.2979 12.3998 16.2963 14.0027 12.2351C14.0027 12.2351 16.4807 11.4435 22.1176 15.2589C24.4702 14.605 26.9925 14.278 29.5 14.2657C32.0075 14.278 34.5322 14.605 36.8897 15.2589C42.5218 11.4435 44.9949 12.2351 44.9949 12.2351C46.6002 16.2988 45.5898 19.3004 45.285 20.0428C47.1779 22.1078 48.321 24.7407 48.321 27.9611C48.321 39.2915 41.4205 41.7868 34.8518 42.5169C35.9089 43.4314 36.875 45.226 36.875 47.9793V56.0746C36.875 56.8588 37.347 57.7807 38.8441 57.4906C50.5581 53.5843 59 42.5292 59 29.5C59 13.2086 45.7914 0 29.5 0Z" fill="black"/>
-                        </svg>
-                    </a>
-                    
-                    <a><svg  viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M39.2164 29.4998C39.2164 24.1334 34.8661 19.7831 29.4998 19.7831C24.1334 19.7831 19.7831 24.1334 19.7831 29.4998C19.7831 34.8661 24.1334 39.2164 29.4998 39.2164C34.8661 39.2164 39.2164 34.8661 39.2164 29.4998Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.0538 19.713C-1.35127 25.1182 -1.35127 33.8818 4.0538 39.287L19.713 54.9462C25.1182 60.3513 33.8818 60.3513 39.287 54.9462L54.9462 39.287C60.3513 33.8818 60.3513 25.1182 54.9462 19.713L39.287 4.0538C33.8818 -1.35127 25.1182 -1.35127 19.713 4.0538L4.0538 19.713ZM36.3508 36.3508C40.1345 32.5673 40.1345 26.4327 36.3508 22.6492C32.5673 18.8655 26.4327 18.8655 22.6492 22.6492C18.8655 26.4327 18.8655 32.5673 22.6492 36.3508C26.4327 40.1345 32.5673 40.1345 36.3508 36.3508Z" fill="#2962FF"/>
-                        </svg>
-                    </a>
-
+        
+        
+                    <h1 class="change"> A Developer of things </h1>
+        
+                    <div class="bottom">
+        
+                        <header>
+                            <b><i>Some kid, who thinks becomeing a <br>software enginer is a good life carrer.</i></b>
+                        </header>
+        
+                        <div class="links_holder">
+                                
+                            <a href="https://dev.to/ota200" style="font-size: 2rem;color:black;text-decoration: none;"><h2 ><u>blog</u></h2></a>
+        
+        
+                        </div>
+        
+                    </div>
+        
+            
                 </div>
 
             </div>
 
-      
-        </div>
+            <div id="aboutbar">
+                <h1 class="center"> About Me </h1>
+
+
+
+                <div class="bottom2">
+                    <h2>Hello, </h2> <p>I am O.T.A. A teen devloper that has been coding for most there life but really took it seriously 4 years ago. </p>
+                    <h2>Programming Knowledge</h2><p>React.js, Blender, Python, Web design, Web development</p>
+                    <h2>Hobbies</h2><p>I like going for bike rides and playing violin.</p>
+
+                </div>
+            </div>
+
+            <div id="projectsbar">
+                
+                <h1 class="center"> Projects </h1>
+
+                <div class="bottom2"  style="top:65%;">
+                    <h2>This Website</h2> 
+                    <p>I dont really have much but hopefully I can grow this</p>
+                </div>
+
+            </div>
+
+        <div>
 
     </body>
+    <script src="index.js" ></script>
+
 </html>
