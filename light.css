@@ -156,6 +156,12 @@ button{
 #projectsbar{
     display: none;
 }
+
+#main{
+    opacity: 1;
+    transition: opacity 1s; 
+}
+
 /*
 
 @media (prefers-color-scheme: dark) {

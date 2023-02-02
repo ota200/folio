@@ -33,13 +33,10 @@ function set(){
 }
 
 function home(){
-    alert("home")
     element[0].style.display = "block"
     element[1].style.display = "none"
     element[2].style.display = "none"
 
-
-    
 }
 
 function about(){
