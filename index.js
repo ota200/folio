@@ -37,6 +37,8 @@ function home(){
     element[1].style.display = "none"
     element[2].style.display = "none"
 
+    
+
 }
 
 function about(){
