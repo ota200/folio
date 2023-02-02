@@ -6,16 +6,44 @@
 
 body{
     background-color: #0B110E;
-
     background-image: url(https://raw.githubusercontent.com/taimoorshahzada/Film-Grain-Noise-Effect-on-Background-in-Website-using-Pure-CSS/main/noise.gif);  
     color:#FEFCFB;
     background-blend-mode: multiply;
 }
 
-@keyframes fadeIn {
-    from{ background-color: #FEFCFB; }
-    to { background-color: #0B110E; }
+
+/*
+Typefaces
+*/
+
+h1{
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7vw;
+    padding-top:8vh;
 }
+
+h2{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 2.5vw;
+
+}
+
+header{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    text-align: center;
+
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -38,27 +66,7 @@ body{
     filter: blur(137px);
 }
 
-h2{
-    font-family: 'Roboto Flex', sans-serif;
-    font-size: 2.5vw;
 
-}
-
-header{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
-    font-size: 2vw;
-    text-align: center;
-
-
-}
-
-h1{
-    position: relative;
-    font-family: 'Rubik', sans-serif;
-    font-size: 7vw;
-    padding-top:8vh;
-}
 
 
 .pad{
