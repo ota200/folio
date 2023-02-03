@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+/*
+background color / effects
+*/
 *{padding:none;margin:none;}
 
 body{
@@ -11,6 +14,19 @@ body{
     background-blend-mode: multiply;
 }
 
+.bg_blobs{
+    position: fixed;
+    z-index: -1;
+}
+
+.bg_blobs span{
+    height: 15rem;
+    background: radial-gradient(rgba(255, 49, 46, 0.351), rgba(254, 207, 112, 0.137) );
+    border: solid;
+    border-radius: 50%;
+    display: inline-block;
+    filter: blur(137px);
+}
 
 /*
 Typefaces
@@ -34,12 +50,18 @@ header{
     font-weight: 800;
     font-size: 2vw;
     text-align: center;
-
-
 }
 
 
+button{
+    background-color:#FF312E;
+    border:none;
+    border-radius:.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color:#FEFCFB;
 
+}
 
 
 
@@ -52,19 +74,7 @@ header{
     color:#FEFCFB;
 }
 
-.bg_blobs{
-    position: fixed;
-    z-index: -1;
-}
 
-.bg_blobs span{
-    height: 15rem;
-    background: radial-gradient(rgba(255, 49, 46, 0.351), rgba(254, 207, 112, 0.137) );
-    border: solid;
-    border-radius: 50%;
-    display: inline-block;
-    filter: blur(137px);
-}
 
 
 
@@ -74,15 +84,7 @@ header{
     padding-top: 2%;
 }
 
-button{
-    background-color:#FF312E;
-    border:none;
-    border-radius:.7rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color:#FEFCFB;
 
-}
 
 
 .home {
@@ -187,14 +189,20 @@ button{
 }
 
 #main{
-    animation: fadeIn 5s;
+
 }
 
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+.large_div{
+    position: absolute;
+    z-index: 1000;
+    background-color: #0B110E;
+    width:100vw;
+    height:100vh;
+
+    
 }
+
 
 /*
 FEE7C2
