@@ -153,7 +153,6 @@ button{
 
 
 #main{
-    animation: fadeIn 5s;
 }
 
 #homebar{
@@ -168,14 +167,16 @@ button{
     display: none;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+
 
 .large_div{
     position: absolute;
     z-index: 1000;
     background-color: #FCF7F6;
-    
+    position: absolute;
+    z-index: 1000;
+    background-color: #0B110E;
+    width:100vw;
+    height:100vh;
 }
+
