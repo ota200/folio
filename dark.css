@@ -84,11 +84,16 @@ button{
 
 }
 
+
 .home {
+    background-image: url("home.svg");
     background-color: #FECF70;
-    color:#FEFCFB;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
+
 
 .home_icon{
 

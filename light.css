@@ -93,6 +93,11 @@ button{
 
 .home {
     background-image: url("home.svg");
+    background-color: #FF312E;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .home_icon{
@@ -168,91 +173,9 @@ button{
     100% { opacity: 1; }
 }
 
-/*
-
-@media (prefers-color-scheme: dark) {
-    body{
-        background-color: #0B110E;
-        color:#FEFCFB;
-    }
+.large_div{
+    position: absolute;
+    z-index: 1000;
+    background-color: #FCF7F6;
     
-
-    
-    .pad{
-        padding-left: 5%;
-        padding-top: 2%;
-    }
-    
-    button{
-        background-color:#FF312E;
-        border:none;
-        border-radius:.7rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
-        color:#FEFCFB;
-
-    }
-    
-    .home {
-        background-color: #FECF70;
-        color:#FEFCFB;
-
-    }
-    
-    .home_icon{
-    
-        height:4.5vh;
-    }
-    
-    .bg_button{
-        background-color:rgba(254, 207, 112, 0);
-        width:25vw;
-        height:7vh;
-        text-align: center;
-        border-radius:.7rem;
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr;
-        grid-column-gap: 0.2rem;
-        border:solid;
-        border-width:0.2rem;
-        border-color: rgba(254, 207, 112, 0);
-        margin-top: 2rem;
-    }
-    
-    .nav{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 30vw;
-    }
-    
-    .bottom{
-        padding-top:10vh;
-        display: grid;
-        justify-content: left;
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .links_holder{
-        border: solid 0.4rem #FF312E;
-        border-radius: 4rem;
-        width:8vw;
-        text-align: center;
-        margin-left:30vw;
-    }
-    
-    .links_holder svg{
-        margin-top:1rem;
-    
-        height:2rem;
-        padding-right:0.5rem;
-        padding-left:0.5rem;
-    }
 }
-
-*/
-
-/*
-FEE7C2
-FCF7F6
-
-*/
