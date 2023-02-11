@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root{
+    --red:#FF312E;
+    --yellow:#FECF70;
+    --black:#0B110E;
+    --white:#FEFCFB;
+    --faded_yellow: rgba(254, 207, 112, 0.1);
+    --faded_yellow-increased:  rgba(254, 207, 112, 0.4);
+    --radius_nav: 2rem;
+    --button_text_size:3rem;
+}
+
+*{padding:none;margin:none; }
+
+body{
+    background-color: var(--white);
+}
+
+nav{
+    background-color: var(--faded_yellow-increased);
+    border: 3rem solid var(--faded_yellow-increased);
+    border-radius: var(--radius_nav);
+}
+
+button{
+    background-color: var(--yellow);
+    border:none;
+    border-radius: var(--radius_nav);
+    font-size:var(--button_text_size);
+
+}
+
+button[data-variant="home"]{
+    background-color: var(--red);
+
+}

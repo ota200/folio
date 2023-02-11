@@ -1,8 +1,7 @@
-var theme = document.getElementsByTagName('link')[0];
+/*var theme = document.getElementsByTagName('link')[0];
 var body = document.getElementsByTagName('body')
 var page = document.getElementsByClassName('homebar')
 
-const element = document.getElementById("main").children
 
 function Theme(){
     if (theme.getAttribute('href') == 'light.css') {
@@ -30,7 +29,10 @@ function set(){
         theme.setAttribute('href', b);
     }
 
-}
+}*/
+
+const element = document.getElementById("main").children
+
 
 function home(){
     element[0].style.display = "block"
