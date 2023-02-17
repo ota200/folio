@@ -8,12 +8,17 @@
     --black:#0B110E;
     --white:#FEFCFB;
     --faded_yellow: rgba(254, 207, 112, 0.1);
-    --faded_yellow-increased:  rgba(254, 207, 112, 0.4);
-    --radius_nav: 2rem;
-    --button_text_size:3rem;
+    --faded_yellow-increased:rgba(254, 207, 112, 0.4);
+    --radius_nav: 0.9rem;
+    --button_text_size:1.5rem;
+    --padding_increase:2rem;
 }
 
-*{padding:none;margin:none; }
+*{
+    padding:none;
+    margin:none; 
+    font-family: 'Roboto';
+}
 
 body{
     background-color: var(--white);
@@ -21,8 +26,10 @@ body{
 
 nav{
     background-color: var(--faded_yellow-increased);
-    border: 3rem solid var(--faded_yellow-increased);
     border-radius: var(--radius_nav);
+    display: flex;
+    padding:0.3rem;
+    column-gap: 0.3rem;
 }
 
 button{
@@ -30,10 +37,19 @@ button{
     border:none;
     border-radius: var(--radius_nav);
     font-size:var(--button_text_size);
+    padding:0.7rem;
+    flex-grow: 1;
+}
+
+button:hover{
+    padding-left:20rem;
+    padding-right: 20rem;
 
 }
 
 button[data-variant="home"]{
     background-color: var(--red);
-
+    background-image: url("home2.svg");
+    background-repeat: no-repeat;
+    background-position: center; 
 }
