@@ -7,13 +7,15 @@
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="set()" >
+    <body>
+
+
+        <div class="blob_filter">
+            <div class="blob" id="blob">
+            </div>
+        </div>
 
         <div class="pad">
-            <div class="bg_blobs">
-                <span style="left:80%;margin-top:10%; width:70rem;"></span>
-                <span style="left:100%;margin-top:10%; width:30rem;"></span>
-            </div>
 
             <div class='nav'>
           
@@ -21,22 +23,43 @@
       
                 <nav>
                     <button onclick="home()" data-variant="home"></button>
-                    <button onclick="about()" >about</button>
-                    <button onclick="projects()" >projects</button>
-                    <button onclick="Theme()">theme</button>
+                    <nav data-variant="hide">
+                        <button onclick="about()" >about</button>
+                        <button onclick="projects()" >projects</button>
+                        <button onclick="Theme()">theme</button>
+                    </nav>
                 </nav>
+
+                
       
             </div>
         </div>
 
         <div id="main">
 
-            <div id="homebar">        
-            
+            <div id="homebar">
+
+                <div class="center"><h2>A Developer <br>of things</h2></div>
+                <a>I like building beautifully and simply designed apps and webpages. </a>        
+
             </div>
 
             <div id="aboutbar">
                
+                <div data-variant="Who">
+                    <h1>Who I am.</h1>
+                    <p>Hi, I am O.T.A  A self taught developer, dev-blogger and 3D artist who has had a love of problem solving and coding since a early age.</p>
+                </div>
+
+                <div>
+                    <h1>What I will bring</h1>
+                    <p>Simple designs for things like blogs, personal sites or mini About Me’s. Anything web related I will, well at least try my best to create.</p>
+                </div>
+                <div>
+                    <h1>What I will bring</h1>
+                    <p>-HTML/CSS/JS <br>-React.js <br> Figma<br>Blender<br>Scss</p>
+                </div>
+                
             </div>
 
             <div id="projectsbar">

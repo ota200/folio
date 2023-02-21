@@ -1,27 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
     --red:#FF312E;
     --yellow:#FECF70;
     --black:#0B110E;
     --white:#FEFCFB;
+    --background:#fde9e5;
     --faded_yellow: rgba(254, 207, 112, 0.1);
     --faded_yellow-increased:rgba(254, 207, 112, 0.4);
     --radius_nav: 0.9rem;
     --button_text_size:1.5rem;
+    --button_text_size_:1.7rem;
     --padding_increase:2rem;
+    --h3_text_size:2rem;
+    --div_sizewm: 60vw;
+    --div_sizehm: 60vh;
+    --div_sizewma: 90vw;
+    --div_sizehma: 90vh;
 }
+
 
 *{
     padding:none;
     margin:none; 
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    font-weight: 483;
+    color:var(--black);
+
 }
 
 body{
-    background-color: var(--white);
+    background-color: var(--background);
+    overflow:hidden;
+
+}
+
+
+.main{
+    position: absolute;
+}
+
+.blob{
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(255, 49, 46, 0.678) ,#fecf70a5);     
+  aspect-ratio: 1;
+  position: absolute;
+  min-width:var(--div_sizewm);
+  min-height:var(--div_sizehm);
+  max-width:var(--div_sizewma);
+  max-height:var(--div_sizehma);
+  filter: blur(20rem);
+  animation: 50s infinite rot linear;
+
+}
+
+@keyframes rot {
+  from { transform:rotate(0deg);}
+  to {   transform:rotate(360deg);}
+
+}
+
+
+.blob_filter{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  z-index: -100;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+
+h2{
+    font-weight: 900;
+    font-size: 2rem;
+    position: absolute;
+    font-family: 'Roboto Flex';
+
+}
+
+a{
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 1.3rem;
+}
+
+#homebar{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#homebar h2{
+    font-family: 'Rubik';
+    font-size: 7rem;
+    position: relative;
+    word-break: break-word;
+}
+
+.center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*
+Nav bar elements
+*/
+
+
+.nav{
+    display: flex;
+    width:90%;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 nav{
@@ -32,24 +137,96 @@ nav{
     column-gap: 0.3rem;
 }
 
-button{
-    background-color: var(--yellow);
-    border:none;
+nav[data-variant="hide"]{
+  border:none;
+  padding:0;
+  column-gap: 0.2rem;
+  background-color: transparent;
+
+}
+
+.nav nav{
+    margin-left: auto;
+}
+
+
+/*
+button variants and 
+*/
+button,button:target{
+    border:solid;
+    background-color: transparent;
+    border-color: var(--yellow);
     border-radius: var(--radius_nav);
     font-size:var(--button_text_size);
     padding:0.7rem;
     flex-grow: 1;
-}
+    transition: font-size 0.1s ease-out 50ms;
 
-button:hover{
-    padding-left:20rem;
-    padding-right: 20rem;
+
 
 }
+
+nav button:hover{
+
+    font-size:var(--button_text_size_);
+    overflow-wrap: break-word;
+    text-transform: capitalize;
+    font-weight: 900;
+
+}
+
+
 
 button[data-variant="home"]{
-    background-color: var(--red);
+    background-color: transparent;
+    border-color: var(--red);
     background-image: url("home2.svg");
     background-repeat: no-repeat;
     background-position: center; 
+    padding-left:1.7rem;
+    padding-right: 1.7rem;
+}
+
+/*
+ABOUT ME
+*/
+
+#aboutbar{
+    position: absolute;
+    background-color: var(--faded_yellow-increased);
+    border-radius: var(--radius_nav);
+    padding:0.3rem;
+    column-gap: 0.3rem;
+    left:50%;
+    top:60%;
+    transform: translate(-50%,-50%);
+    width:90%;
+    display:grid;
+
+}
+
+#aboutbar div{
+    border:solid;
+    border-color: var(--white);
+    border-radius: var(--radius_nav);
+
+    padding:2rem;
+    margin: 0.5rem;
+    width: 27%;
+    display: inline-block;
+}
+
+#aboutbar div[data-variant="Who"]{
+    border-color: var(--red);
+
+}
+
+h1{
+    font-weight: 900;  
+}
+
+
+p{
+    font-size: 1.7rem;
 }

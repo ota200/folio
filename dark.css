@@ -5,6 +5,7 @@
 /*
 background color / effects
 */
+
 *{padding:none;margin:none;}
 
 body{
@@ -27,6 +28,7 @@ body{
     display: inline-block;
     filter: blur(137px);
 }
+
 
 /*
 Typefaces
