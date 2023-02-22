@@ -45,7 +45,7 @@ body{
 .blob{
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(255, 49, 46, 0.678) ,#fecf70a5);     
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   position: absolute;
   min-width:var(--div_sizewm);
   min-height:var(--div_sizehm);
@@ -136,9 +136,7 @@ Nav bar elements
 }
 
 .nav[data-variant="extra"]{
-    padding:5rem;
     position: absolute;
-    margin-top:25%;
 }
 
 nav{
@@ -240,6 +238,22 @@ button[data-variant="arrow"]{
 
 }
 
+
+button[data-variant="ham"]{
+    display:none;
+    aspect-ratio: 1/1;
+
+}
+
+button[data-variant="ham"] div{
+    background-color: var(--white);
+    border-color: var(--background);
+    width:2rem;
+    height: 0.2rem;
+    border-radius: 10rem;
+
+}
+
 /*
 ABOUT ME
 */
@@ -257,7 +271,6 @@ ABOUT ME
     left:50%;
     transform: translate(-50%,-50%);
     width:80%;
-
 }
 
 #aboutbar div{
@@ -265,6 +278,7 @@ ABOUT ME
     border-color: var(--white);
     border-radius: var(--radius_nav);
     padding: 1rem;
+
 }
 
 #aboutbar div[data-variant="Who"]{
@@ -290,6 +304,7 @@ PROJECTS
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem;
     column-gap: 0.5rem;
+    
 }
 
 
@@ -328,3 +343,42 @@ PROJECTS
     border-radius: 0 0 var(--radius_nav) var(--radius_nav);
     padding:1rem;
 }
+
+
+
+@media (max-width: 600px) {
+    #homebar h2{
+        font-family: 'Rubik';
+        font-size: 3rem;
+        position: relative;
+        word-break: break-word;
+    }
+
+    #homebar{
+        position: absolute;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav[data-variant="hide"]{
+
+        display:none;
+    }
+
+    button[data-variant="home"]{
+        aspect-ratio: 1/1;
+    }
+
+    button[data-variant="ham"]{
+        display:grid;
+        row-gap: 0.2rem;
+    }
+    
+    .nav[data-variant="extra"]{
+        
+    }
+  }
