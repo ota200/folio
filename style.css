@@ -135,8 +135,10 @@ Nav bar elements
     
 }
 
-nav[data-variant="extra"]{
+.nav[data-variant="extra"]{
     padding:5rem;
+    position: absolute;
+    margin-top:25%;
 }
 
 nav{
@@ -222,6 +224,8 @@ button[data-variant="arrow"]{
     text-align: center;
     padding: 2rem;
     background-image: url(B.svg);
+    border:none;
+    background-color: var(--yellow);
 }
 
 
@@ -231,7 +235,8 @@ button[data-variant="arrow"]{
     background-position: center; 
     aspect-ratio: 1/1;
     padding: 2rem;
-
+    border:none;
+    background-color: var(--yellow);
 
 }
 
