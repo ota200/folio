@@ -108,11 +108,17 @@ a{
     word-break: break-word;
 }
 
+#homebar .nav{
+    position: absolute;
+}
+
 .center{
     display:flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 1rem;
+    column-gap: 0.5rem;
 }
 
 /*
@@ -127,6 +133,10 @@ Nav bar elements
     margin-left: auto;
     margin-right: auto;
     
+}
+
+nav[data-variant="extra"]{
+    padding:5rem;
 }
 
 nav{
@@ -162,7 +172,8 @@ button,button:target{
     padding:0.7rem;
     flex-grow: 1;
     transition: font-size 0.1s ease-out 50ms;
-
+    background-repeat: no-repeat;
+    background-position: center; 
 
 
 }
@@ -188,6 +199,42 @@ button[data-variant="home"]{
     padding-right: 1.7rem;
 }
 
+button[data-variant="git"]{
+    background-color: var(--black);
+    border-color: var(--black);
+    background-image: url(git.svg);
+    padding:2rem;
+}
+
+button[data-variant="arrow"]{
+    border-color: var(--white);
+    background-image: url(arrow.svg);
+    padding:2rem;
+
+}
+
+.blog{
+    font-family: Rubik;
+    font-size: 900;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-image: url(B.svg);
+}
+
+
+.git{
+    background-image: url(git2.svg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    aspect-ratio: 1/1;
+    padding: 2rem;
+
+
+}
+
 /*
 ABOUT ME
 */
@@ -196,13 +243,15 @@ ABOUT ME
     position: absolute;
     background-color: var(--faded_yellow-increased);
     border-radius: var(--radius_nav);
-    padding:0.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 0.3rem;
+    row-gap: 0.3rem;
+    padding: 2rem;
+    top:50%;
     left:50%;
-    top:60%;
     transform: translate(-50%,-50%);
-    width:90%;
-    display:grid;
+    width:80%;
 
 }
 
@@ -210,11 +259,7 @@ ABOUT ME
     border:solid;
     border-color: var(--white);
     border-radius: var(--radius_nav);
-
-    padding:2rem;
-    margin: 0.5rem;
-    width: 27%;
-    display: inline-block;
+    padding: 1rem;
 }
 
 #aboutbar div[data-variant="Who"]{
@@ -229,4 +274,52 @@ h1{
 
 p{
     font-size: 1.7rem;
+}
+
+/*
+PROJECTS
+*/
+
+#projectsbar{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    column-gap: 0.5rem;
+}
+
+
+
+#projectsbar .p_holder{
+    border: solid;
+    border-radius: var(--radius_nav);
+    border-color: var(--white);
+    display:grid;
+    background-color: #fecf702a;
+    padding:0.5rem;
+}
+
+.p_holder > div:first-child{
+    background-color: var(--yellow);
+    border-radius: var(--radius_nav) var(--radius_nav) 0 0;
+    position: relative;
+    text-align: center;
+
+}
+
+.p_holder h3{
+    color:var(--red);
+    font-weight: 900;
+    font-size: xx-large;
+    padding:1rem;
+    text-decoration: underline;
+
+
+}
+
+.p_holder > div:nth-of-type(2){
+    border: solid;
+    border-color: var(--red);
+    border-top: none;
+    border-radius: 0 0 var(--radius_nav) var(--radius_nav);
+    padding:1rem;
 }

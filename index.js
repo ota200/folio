@@ -37,24 +37,37 @@ element[1].style.display = "none"
 element[2].style.display = "none"
 
 function home(){
-    element[0].style.display = "block"
-    element[1].style.display = "none"
-    element[2].style.display = "none"
-
+    // element[0].style.display = "block"
+    // element[1].style.display = "none"
+    // element[2].style.display = "none"
+    location.href ="index.html"
     
 
 }
 
 function about(){
-    element[0].style.display = "none"
-    element[1].style.display = "block"
-    element[2].style.display = "none"
+    // element[0].style.display = "none"
+    // element[1].style.display = "block"
+    // element[2].style.display = "none"
+    location.href ="a.html"
 }
 
 function projects(){
-    element[0].style.display = "none"
-    element[1].style.display = "none"
-    element[2].style.display = "block"
+    // element[0].style.display = "none"
+    // element[1].style.display = "none"
+    // element[2].style.display = "block"
+    location.href ="p.html"
+
+}
+
+function blog(){
+    location.href ="https://dev.to/ota200"
+
+}
+
+function github(){
+    location.href ="https://github.com/ota200"
+
 }
 
 
