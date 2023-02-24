@@ -10,79 +10,77 @@
 
     <body>
 
-
-        <div class="blob_filter">
+        <div class="blob_center">
             <div class="blob" id="blob">
             </div>
         </div>
 
-        <div class="pad">
+        <div class="elements">
+            <div id="projectsbar">
+                <div class="p_holder">
+                    <div>
+                        <div class="pbutton">
+                            <button data-variant="git"></button>
+                            <button data-variant="arrow"></button>
+                        </div>
+                        <h3>Random Generation Pygame</h3>
+                    </div>
+                    <div>
+                        <p>A small simple python, customizable, random generation app. Made/used in python. </p>
+                    </div>
+    
+                </div>
+                
+                <div class="p_holder">
+                    <div>
+                        <div class="pbutton">
+                            <button data-variant="git"></button>
+                            <button data-variant="arrow"></button>
+                        </div>
+                        <h3>Random Generation Pygame</h3>
+                    </div>
+                    <div>
+                        <p>A small simple python, customizable, random generation app. Made/used in python. </p>
+                    </div>
+    
+                </div>
+    
+            </div>
 
-            <div class='nav'>
-          
-                <h2>O.T.A</h2>
-      
-                <nav>
+
+            <div class="pad">
+
+                <nav data-variant="logo">
+                    <button data-variant="logo"><h2>O.T.A</h2></button>
+                </nav>
+            
+
+                <button onclick="lines()" data-variant="ham">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                </button>
+
+                <nav data-variant="hide">
                     <button onclick="home()" data-variant="home"></button>
-                    <nav data-variant="hide">
-                        <button onclick="about()" >about</button>
-                        <button onclick="projects()" >projects</button>
-                        <button onclick="Theme()">theme</button>
-                    </nav>
+                    <button onclick="about()" >about</button>
+                    <button onclick="projects()" >projects</button>
+                    <button onclick="Theme()">theme</button>
                 </nav>
 
-                
-      
-            </div>
-        </div>
+                <nav data-variant="social">
+                    <button onclick="blog()" data-variant="blog" title="My blog"></button>
+                    <button onclick="github()" data-variant="git2" title="Github Profile"></button>
+                </nav>
 
-        <div id="projectsbar">
-
-            <div class="p_holder">
-                <div>
-                    <div class="center">
-                        <button data-variant="git"></button>
-                        <button data-variant="arrow"></button>
-                    </div>
-                    <h3>Random Generation Pygame</h3>
-                </div>
-                <div>
-                    <p>A small simple python, customizable, random generation app. Made/used in python. </p>
-                </div>
-
-            </div>
-
-            <div class="p_holder">
-                <div>
-                    <div class="center">
-                        <button data-variant="git"></button>
-                        <button data-variant="arrow"></button>
-                    </div>
-                    <h3>Random Generation Pygame</h3>
-                </div>
-                <div>
-                    <p>A small simple python, customizable, random generation app. Made/used in python. </p>
-                </div>
-
-            </div>
-
-            <div class="p_holder">
-                <div>
-                    <div class="center">
-                        <button data-variant="git"></button>
-                        <button data-variant="arrow"></button>
-                    </div>
-                    <h3>Random Generation Pygame</h3>
-                </div>
-                <div>
-                    <p>A small simple python, customizable, random generation app. Made/used in python. </p>
-                </div>
 
             </div>
 
         </div>
+
 
     </body>
     <script src="index.js" ></script>
 
-</html>
+</html>        

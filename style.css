@@ -1,3 +1,7 @@
+/*
+Intial Commands
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -31,29 +35,33 @@
 
 }
 
+/*
+Background stuff
+*/
+
 body{
     background-color: var(--background);
-    overflow:hidden;
-
 }
 
+.blob_center{
+    display: flex;
+    justify-content: center;
+    align-self: center;
 
-.main{
-    position: absolute;
 }
 
 .blob{
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(255, 49, 46, 0.678) ,#fecf70a5);     
-  aspect-ratio: 1/1;
-  position: absolute;
+  position: fixed;
   min-width:var(--div_sizewm);
   min-height:var(--div_sizehm);
   max-width:var(--div_sizewma);
   max-height:var(--div_sizehma);
   filter: blur(20rem);
-  animation: 50s infinite rot linear;
-
+  animation: 60s infinite rot linear;
+  aspect-ratio: 3/1;
+  z-index: -100;
 }
 
 @keyframes rot {
@@ -62,28 +70,28 @@ body{
 
 }
 
-
-.blob_filter{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  z-index: -100;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.elements{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
 
 }
 
+/*
+Home Page
+*/
 
+
+/* Logo size */
 h2{
     font-weight: 900;
-    font-size: 2rem;
-    position: absolute;
     font-family: 'Roboto Flex';
-
+    font-size: 2rem;
+    margin: 0;
 }
+
+/*  I like building beautifully and simply designed apps and webpages. Type */
 
 a{
     font-style: italic;
@@ -91,77 +99,70 @@ a{
     font-size: 1.3rem;
 }
 
+/* centers type elements on home page */
+
+
 #homebar{
-    position: absolute;
-    display:flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 }
+
+/* A Developer of things Type*/
 
 #homebar h2{
     font-family: 'Rubik';
-    font-size: 7rem;
+    font-size: minmax(6rem,7rem);
     position: relative;
     word-break: break-word;
+    font-size: 9vw;
 }
 
-#homebar .nav{
-    position: absolute;
-}
 
-.center{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    column-gap: 0.5rem;
-}
 
 /*
 Nav bar elements
 */
 
+.pad{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    width:90vw;
+    margin: auto;
+    z-index: 100;
 
-.nav{
-    display: flex;
-    width:90%;
-    margin-top:5%;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.nav[data-variant="extra"]{
-    position: absolute;
 }
 
 nav{
-    background-color: var(--faded_yellow-increased);
     border-radius: var(--radius_nav);
     display: flex;
-    padding:0.3rem;
-    column-gap: 0.3rem;
+    text-align: center;
+    height: 4rem;
+    row-gap: 3rem;
+    column-gap:.3rem;
+    z-index: 100;
+    width:fit-content;
+    justify-self: center;
+}
+
+nav[data-variant="logo"]{
+    background-color: transparent;
+    text-align: center;
+    font-size: minmax(1px,1.3rem);
+
 }
 
 nav[data-variant="hide"]{
   border:none;
   padding:0;
-  column-gap: 0.2rem;
   background-color: transparent;
 
 }
 
-.nav nav{
-    margin-left: auto;
-}
 
 
 /*
-button variants and 
+button variants and other things
 */
 button,button:target{
     border:solid;
@@ -170,12 +171,11 @@ button,button:target{
     border-radius: var(--radius_nav);
     font-size:var(--button_text_size);
     padding:0.7rem;
-    flex-grow: 1;
-    transition: font-size 0.1s ease-out 50ms;
+    transition: font-size 0.1s ease-out 50ms,background-color 0.3s ease-out 50ms, background-image 0.3s ease-out 50ms;
     background-repeat: no-repeat;
     background-position: center; 
-
-
+    text-align: center;
+    color:var(--black);
 }
 
 nav button:hover{
@@ -184,6 +184,7 @@ nav button:hover{
     overflow-wrap: break-word;
     text-transform: capitalize;
     font-weight: 900;
+    background-color: var(--yellow);
 
 }
 
@@ -197,6 +198,19 @@ button[data-variant="home"]{
     background-position: center; 
     padding-left:1.7rem;
     padding-right: 1.7rem;
+    background-color: transparent;
+}
+
+button[data-variant="home"]:hover{
+    background-image: url(home.svg);
+    background-color: var(--red);
+}
+
+
+.pbutton{
+    display:flex;
+    column-gap: 0.5rem;
+    padding: 1rem;
 }
 
 button[data-variant="git"]{
@@ -204,16 +218,24 @@ button[data-variant="git"]{
     border-color: var(--black);
     background-image: url(git.svg);
     padding:2rem;
+    width:100%;
 }
 
 button[data-variant="arrow"]{
     border-color: var(--white);
     background-image: url(arrow.svg);
     padding:2rem;
+    width:100%;
+    transition:  background-position 0.4s ease-out 50ms;
 
 }
 
-.blog{
+button[data-variant="arrow"]:hover{
+    background-attachment: fixed;
+    background-position: 30%;
+}
+
+button[data-variant="blog"]{
     font-family: Rubik;
     font-size: 900;
     aspect-ratio: 1/1;
@@ -223,18 +245,16 @@ button[data-variant="arrow"]{
     padding: 2rem;
     background-image: url(B.svg);
     border:none;
-    background-color: var(--yellow);
 }
 
 
-.git{
+button[data-variant="git2"]{
     background-image: url(git2.svg);
     background-repeat: no-repeat;
     background-position: center; 
     aspect-ratio: 1/1;
     padding: 2rem;
     border:none;
-    background-color: var(--yellow);
 
 }
 
@@ -254,12 +274,20 @@ button[data-variant="ham"] div{
 
 }
 
+button[data-variant="logo"]{
+    border:none;
+}
+
+nav button[data-variant="logo"]:hover{
+
+    background-color: transparent;
+
+}
 /*
 ABOUT ME
 */
 
 #aboutbar{
-    position: absolute;
     background-color: var(--faded_yellow-increased);
     border-radius: var(--radius_nav);
     display: grid;
@@ -267,10 +295,6 @@ ABOUT ME
     column-gap: 0.3rem;
     row-gap: 0.3rem;
     padding: 2rem;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:80%;
 }
 
 #aboutbar div{
@@ -303,8 +327,7 @@ PROJECTS
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem;
-    column-gap: 0.5rem;
-    
+    column-gap: 0.5rem;    
 }
 
 
@@ -313,9 +336,11 @@ PROJECTS
     border: solid;
     border-radius: var(--radius_nav);
     border-color: var(--white);
-    display:grid;
+    display:flex;
     background-color: #fecf702a;
     padding:0.5rem;
+    flex-direction: column;
+
 }
 
 .p_holder > div:first-child{
@@ -330,7 +355,9 @@ PROJECTS
     color:var(--red);
     font-weight: 900;
     font-size: xx-large;
-    padding:1rem;
+    padding-left:1rem;
+    padding-right:1rem;
+
     text-decoration: underline;
 
 
@@ -347,38 +374,19 @@ PROJECTS
 
 
 @media (max-width: 600px) {
-    #homebar h2{
-        font-family: 'Rubik';
-        font-size: 3rem;
-        position: relative;
-        word-break: break-word;
-    }
-
-    #homebar{
-        position: absolute;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-    }
-
     nav[data-variant="hide"]{
 
         display:none;
     }
 
-    button[data-variant="home"]{
-        aspect-ratio: 1/1;
+    button[data-variant="ham"]{
+        display:block;
     }
 
-    button[data-variant="ham"]{
+    #projectsbar{
         display:grid;
-        row-gap: 0.2rem;
-    }
-    
-    .nav[data-variant="extra"]{
-        
-    }
-  }
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        column-gap: 0.5rem;    
+    } 
+}
