@@ -41,6 +41,7 @@ Background stuff
 
 body{
     background-color: var(--background);
+    overflow: hidden;
 }
 
 .blob_center{
@@ -80,6 +81,10 @@ body{
     flex-direction: column;
     row-gap: 5vh;
 
+}
+
+.elements[data-variant="p"]{
+    height: fit-content;
 }
 
 /*
@@ -132,7 +137,8 @@ Nav bar elements
     grid-template-columns: 1fr 1fr 1fr ;
     margin: auto;
     z-index: 100;
-    top:90%;
+    top:90vh;
+    justify-self: center;
 }
 
 nav{
@@ -356,12 +362,13 @@ PROJECTS
 */
 
 #projectsbar{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%,1fr)); 
-   
-    column-gap: 0.5rem;
-    overflow-x:hidden;
-    overflow-y:auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; 
+    column-gap: 2rem;
+    scroll-snap-type: x proximity;
 }
 
 
@@ -374,6 +381,11 @@ PROJECTS
     background-color: #fecf702a;
     padding:0.5rem;
     flex-direction: column;
+    height:30%;
+    flex: 0 0 auto; 
+    width:30vw;
+    height: fit-content;
+    scroll-snap-align: start;
 
 }
 
