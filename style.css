@@ -421,14 +421,14 @@ PROJECTS
 
     .elements{
         row-gap: 0;
-
-
+        height:100%;
     }
 
-    #projectsbar .p_holder{
-        flex-direction: row;
-    
+    .elements[data-variant="p"]{
+        top:38%;
     }
+
+
 
     #aboutbar{
 
@@ -475,17 +475,6 @@ PROJECTS
         display:block;
     }
     
-
-
-
-    
-
-    #projectsbar{
-        display:grid;
-        grid-template-columns: 1fr;
-        column-gap: 0.5rem; 
-        padding:1rem;
-    } 
 
     button[data-variant="blog"]{
         display:none;
@@ -588,5 +577,26 @@ PROJECTS
     .pad{
         height: 100%;
     }
+
+
+    #projectsbar{
+        display: flex;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        overflow: scroll;
+
+        scroll-snap-type: y proximity;
+        flex-direction: column;
+        height: 60vh;
+
+
+    }
+    #projectsbar .p_holder{
+
+        width: fit-content;
+    
+    }
+    
+    
 
 }
