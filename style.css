@@ -75,6 +75,7 @@ body{
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
+    width:90%;
 
 }
 
@@ -112,7 +113,6 @@ a{
 
 #homebar h2{
     font-family: 'Rubik';
-    font-size: minmax(6rem,7rem);
     position: relative;
     word-break: break-word;
     font-size: 9vw;
@@ -130,7 +130,9 @@ Nav bar elements
     width:90vw;
     margin: auto;
     z-index: 100;
-
+    position: fixed;
+    top:80%;
+    margin-left: 2rem;
 }
 
 nav{
@@ -206,6 +208,22 @@ button[data-variant="home"]:hover{
     background-color: var(--red);
 }
 
+button[data-variant="home2"]{
+    display: none;
+    background-color: transparent;
+    border-color: var(--red);
+    background-image: url("home2.svg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding-left:1.7rem;
+    padding-right: 1.7rem;
+    background-color: transparent;
+}
+
+button[data-variant="home2"]:hover{
+    background-image: url(home.svg);
+    background-color: var(--red);
+}
 
 .pbutton{
     display:flex;
@@ -274,6 +292,22 @@ button[data-variant="ham"] div{
 
 }
 
+
+button[data-variant="about"]{
+    display:none;
+}
+
+button[data-variant="theme"]{
+    display:none;
+}
+
+
+button[data-variant="projects"]{
+    display:none;
+}
+
+
+
 button[data-variant="logo"]{
     border:none;
 }
@@ -288,10 +322,8 @@ ABOUT ME
 */
 
 #aboutbar{
-    background-color: var(--faded_yellow-increased);
-    border-radius: var(--radius_nav);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
     column-gap: 0.3rem;
     row-gap: 0.3rem;
     padding: 2rem;
@@ -325,9 +357,11 @@ PROJECTS
 
 #projectsbar{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem;
-    column-gap: 0.5rem;    
+    grid-template-columns: repeat(auto-fill, minmax(30%,1fr)); 
+   
+    column-gap: 0.5rem;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 
@@ -346,7 +380,6 @@ PROJECTS
 .p_holder > div:first-child{
     background-color: var(--yellow);
     border-radius: var(--radius_nav) var(--radius_nav) 0 0;
-    position: relative;
     text-align: center;
 
 }
@@ -372,16 +405,61 @@ PROJECTS
 }
 
 
+@media (max-width:940px){
 
-@media (max-width: 600px) {
+
+    #projectsbar .p_holder{
+        flex-direction: row;
+    
+    }
+
+    #aboutbar{
+
+        grid-template-rows: repeat(3, minmax(30%, 1fr));
+        grid-template-columns: none;
+        height: 70vh;
+        padding:0;
+        text-align: center;
+    }
+    
+    #aboutbar div{
+
+        padding: 0.5rem;
+        height: fit-content;
+    
+    }
+
+
+    #homebar h2{
+        font-family: 'Rubik';
+        position: relative;
+        word-break: break-word;
+        font-size: 12vw;
+        line-break: strict;
+    }
+    
+
+    
+
     nav[data-variant="hide"]{
 
         display:none;
     }
 
-    button[data-variant="ham"]{
+
+    nav[data-variant="logo"]{
+        display:none;
+    
+    }
+
+    button[data-variant="home2"]{
         display:block;
     }
+    
+
+
+
+    
 
     #projectsbar{
         display:grid;
@@ -389,4 +467,100 @@ PROJECTS
         padding: 2rem;
         column-gap: 0.5rem;    
     } 
+
+    button[data-variant="blog"]{
+        display:none;
+    }
+    
+    
+    button[data-variant="git2"]{
+        display: none;
+    
+    }
+
+    button[data-variant="git"]{
+        border-radius: 5rem;
+        padding:0rem;
+        aspect-ratio: 1/1;
+        width:30%;
+    }
+    
+    button[data-variant="arrow"]{
+        display: none;
+    
+    }
+    
+    button[data-variant="arrow"]:hover{
+        background-attachment: fixed;
+        background-position: 30%;
+    }
+
+    button[data-variant="about"]{
+        background-image: url(person.svg);
+        aspect-ratio: 1/1;
+        transition: background-image 0.1 ease-in 50ms,background-color 0.1 ease-in 50ms;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%; 
+        padding:1.7rem;
+        display: block;
+
+    }
+    
+    button[data-variant="about"]:hover{
+        background-image: url(person2.svg);
+    }
+
+    button[data-variant="theme"]{
+        background-image: url(sun.svg);
+        aspect-ratio: 1/1;
+        transition: background-image 0.1 ease-in 50ms,background-color 0.1 ease-in 50ms;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%; 
+        padding:1.7rem;
+        display: block;
+    }
+    
+    button[data-variant="theme"]:hover{
+        background-image: url(moonl.svg);
+    }
+
+    button[data-variant="projects"]{
+        display:block;
+        background-image: url(projects.svg);
+        aspect-ratio: 1/1;
+        transition: background-image 0.1 ease-in 50ms,background-color 0.1 ease-in 50ms;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%; 
+        padding:1.7rem;
+        display: block;
+    }
+
+    button[data-varinat="projects"]:hover{
+        background-image: url(projects2.svg);
+    }
+
+    #aboutbar p{
+  
+    
+            font-size: 1rem;
+    }
+
+    #aboutbar h1{
+        font-size: 1.7rem;
+    }
+
+    .p_holder > div:first-child{
+        border-radius: var(--radius_nav) 0 0 var(--radius_nav) ;
+    
+    }
+    
+    .p_holder > div:nth-of-type(2){
+        border-top:solid;
+        border-color: var(--red);
+        border-radius: 0 var(--radius_nav) var(--radius_nav) 0;
+    }
+
 }
