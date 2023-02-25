@@ -73,9 +73,12 @@ body{
 .elements{
     position:absolute;
     left:50%;
-    top:45%;
+    top:50%;
     transform: translate(-50%,-50%);
     width:90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
 
 }
 
@@ -127,11 +130,9 @@ Nav bar elements
 .pad{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    width:100vw;
     margin: auto;
     z-index: 100;
-    position: fixed;
-    top:80%;
+    top:90%;
 }
 
 nav{
@@ -406,6 +407,11 @@ PROJECTS
 
 @media (max-width:940px){
 
+    .elements{
+        row-gap: 0;
+
+
+    }
 
     #projectsbar .p_holder{
         flex-direction: row;
@@ -416,14 +422,16 @@ PROJECTS
 
         grid-template-rows: repeat(3, minmax(30%, 1fr));
         grid-template-columns: none;
-        height: 70vh;
-        padding:0;
+        height: 60vh;
+        padding:1rem;
         text-align: center;
+        column-gap: 0rem;
+        row-gap: 0rem;
     }
     
     #aboutbar div{
 
-        padding: 0.5rem;
+        padding: 0rem;
         height: fit-content;
     
     }
@@ -463,8 +471,8 @@ PROJECTS
     #projectsbar{
         display:grid;
         grid-template-columns: 1fr;
-        padding: 2rem;
-        column-gap: 0.5rem;    
+        column-gap: 0.5rem; 
+        padding:1rem;
     } 
 
     button[data-variant="blog"]{
@@ -544,12 +552,14 @@ PROJECTS
     #aboutbar p{
   
     
-            font-size: 1rem;
+        font-size: 1rem;
     }
 
     #aboutbar h1{
         font-size: 1.7rem;
     }
+
+
 
     .p_holder > div:first-child{
         border-radius: var(--radius_nav) 0 0 var(--radius_nav) ;
@@ -560,6 +570,11 @@ PROJECTS
         border-top:solid;
         border-color: var(--red);
         border-radius: 0 var(--radius_nav) var(--radius_nav) 0;
+
+    }
+
+    .pad{
+        height: 100%;
     }
 
 }

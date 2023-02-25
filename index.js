@@ -70,6 +70,9 @@ function github(){
 
 }
 
+function git(){
+    location.href ="https://github.com/ota200/Random-Genertation-Pygame"
+}
 
 
 // const blob = document.querySelector(".blob");
