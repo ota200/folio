@@ -1,6 +1,3 @@
-var theme = document.getElementsByTagName('link')[0];
-var body = document.getElementsByTagName('body')
-var page = document.getElementsByClassName('homebar')
 
 // function Theme(){
 //     if (theme.getAttribute('href') == 'light.css') {
@@ -29,7 +26,7 @@ var page = document.getElementsByClassName('homebar')
 //     }
 
 // }
-
+/*
 const element = document.getElementById("main").children
 
 element[0].style.display = "block"
@@ -74,7 +71,7 @@ function git(){
     location.href ="https://github.com/ota200/Random-Genertation-Pygame"
 }
 
-
+*/
 // const blob = document.querySelector(".blob");
 
 // document.addEventListener('mousemove', e =>{
@@ -96,3 +93,54 @@ function git(){
 
 
 // }
+
+
+const dark_colors = ["#36454F","#023020","#301934","#343434","#1B1212","#28282B","#191970","#353935","#3C4234"]
+const light_colors = ["#FED766","#DDE8B9","#E8D2AE","#D3BCC0","#A39BA8","#D1D1D1","#DBDBDB","#F2EFEA"]
+const a_dark = ["FF4000","#F5BB00","#FC7753"]
+const a_light = ["#780116","#EF626C"]
+
+const n = document.querySelector(":root").style
+
+
+
+
+
+
+fitty('button');
+
+
+
+
+let b = 0
+function change(){
+
+    let k = Math.floor(Math.random() * 2)
+
+
+
+    let c = k
+    if (c == 0){
+
+        m = light_colors[Math.floor(Math.random() * 7)]
+
+        n.setProperty("--white",m)
+        n.setProperty("--btn",m)
+
+        n.setProperty("--black",dark_colors[Math.floor(Math.random() * 7)])
+        n.setProperty("--accent",dark_colors[Math.floor(Math.random() * 7)])
+
+    } else {
+        m = dark_colors[Math.floor(Math.random() * 7)]
+
+        n.setProperty("--white",m)
+        n.setProperty("--btn",m)
+
+        n.setProperty("--black",light_colors[Math.floor(Math.random() * 7)])
+        n.setProperty("--accent",light_colors[Math.floor(Math.random() * 7)])
+
+    }
+
+
+
+}
