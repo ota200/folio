@@ -103,15 +103,6 @@ const a_light = ["#780116","#EF626C"]
 const n = document.querySelector(":root").style
 
 
-
-
-
-
-fitty('button');
-
-
-
-
 let b = 0
 function change(){
 
@@ -145,3 +136,22 @@ function change(){
 
 }
 
+function blog(){
+    location.href ="https://medium.com/@aniscratch"
+
+}
+
+
+
+function show(){
+    document.getElementById("c").style.visibility = "visible"
+
+    console.log("show")
+}
+
+function hide(){
+    document.getElementById("c").style.visibility = "hidden"
+
+    console.log("hide")
+
+}
